@@ -8,10 +8,10 @@ windows-packages: Windows-packages
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.windows-packages](https://galaxy.ansible.com/devops-toolbox.windows-packages)
+[https://galaxy.ansible.com/devopstoolbox.windows-packages](https://galaxy.ansible.com/devopstoolbox.windows-packages)
 
 ```bash
-ansible-galaxy install devops-toolbox.windows-packages
+ansible-galaxy install devopstoolbox.windows-packages
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: windows-packages is configured
       import_role:
-        name: devops-toolbox.windows-packages
+        name: devopstoolbox.windows-packages
       vars:
         windows-packages_packages_state: present
         windows-packages_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
