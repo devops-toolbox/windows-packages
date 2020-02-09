@@ -1,0 +1,10 @@
+---
+# Template configuration files for windows-packages
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ windows-packages_templates_copy }}"
+  when: windows-packages_copy_templates

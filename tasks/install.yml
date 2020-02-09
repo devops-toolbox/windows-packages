@@ -1,0 +1,27 @@
+---
+# Install windows-packages packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ windows-packages_packages_remove }}"
+    state: absent
+  become: true
+  when: windows-packages_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ windows-packages_packages_repos }}"
+    state: "{{ windows-packages_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ windows-packages_packages_prereq }}"
+    state: "{{ windows-packages_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ windows-packages_packages_install }}"
+    state: "{{ windows-packages_packages_state }}"
+  become: true
